@@ -26,6 +26,24 @@ prepare_ubuntu() {
         echo "   Ubuntu ready for next step."
         echo
         ansible --version
+}
+
+prepare_debian() {
+        $SUDO apt update -y
+        $SUDO apt dist-upgrade -y
+        $SUDO apt install dirmngr curl git mc vim facter python python-apt aptitude -y
+        [ $(uname -m) == "aarch64" ] && $SUDO apt install gcc python-dev libffi-dev libssl-dev make -y
+
+        PYTHON_BIN=/usr/bin/python
+        install_pip
+        $SUDO pip install python-apt -U
+
+        set +x
+        echo
+        echo "   Debian Sytem ready for nextcloud."
+        echo
+        ansible --version
+}
 
 usage() {
         echo
