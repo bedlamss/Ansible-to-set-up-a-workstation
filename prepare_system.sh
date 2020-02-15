@@ -51,4 +51,7 @@ fi
 case $ID in
         'ubuntu')
                 prepare_ubuntu
+        *)
+                usage
+        ;;
 esac
