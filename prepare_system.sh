@@ -51,7 +51,4 @@ fi
 case $ID in
         'ubuntu')
                 prepare_ubuntu
-        ;;
-        'debian')
-                prepare_debian
 esac
