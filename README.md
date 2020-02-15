@@ -1,4 +1,4 @@
-# Ansible-to-set-up-a-workstation
+# Ansible to set up a workstation
 
 Playbook for setup web-developers environment 
 
@@ -22,4 +22,22 @@ Code tools:
 
 - Atom
 - Sublime Text 3
+
+
+
+## How to use
+
+  prepare os and install ansible
+
+```bash
+curl -s https://raw.githubusercontent.com/ReinerNippes/nextcloud/master/prepare_system.sh | /bin/bash
+```
+
+
+
+
+
+
+
+
 
