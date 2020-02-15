@@ -30,7 +30,7 @@ Code tools:
   prepare os and install ansible
 
 ```bash
-curl -s https://raw.githubusercontent.com/ReinerNippes/nextcloud/master/prepare_system.sh | /bin/bash
+curl -s https://raw.githubusercontent.com/bedlamss/Ansible-to-set-up-a-workstation/master/prepare_system.sh | /bin/bash
 ```
 
 
