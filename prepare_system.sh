@@ -14,8 +14,8 @@ install_pip () {
 prepare_ubuntu() {
         $SUDO apt update -y
         $SUDO apt dist-upgrade -y
-        $SUDO apt install software-properties-common curl git mc facter python python-apt aptitude -y
-        [ $(uname -m) == "aarch64" ] && $SUDO apt install gcc python-dev libffi-dev libssl-dev make -y
+        $SUDO apt install software-properties-common curl git mc facter python3 python3-apt aptitude -y
+        [ $(uname -m) == "aarch64" ] && $SUDO apt install gcc python3-dev libffi-dev libssl-dev make -y
 
         PYTHON_BIN=/usr/bin/python
         install_pip
@@ -31,8 +31,8 @@ prepare_ubuntu() {
 prepare_debian() {
         $SUDO apt update -y
         $SUDO apt dist-upgrade -y
-        $SUDO apt install dirmngr curl git mc vim facter python python-apt aptitude -y
-        [ $(uname -m) == "aarch64" ] && $SUDO apt install gcc python-dev libffi-dev libssl-dev make -y
+        $SUDO apt install dirmngr curl git mc vim facter python3 python3-apt aptitude -y
+        [ $(uname -m) == "aarch64" ] && $SUDO apt install gcc python3-dev libffi-dev libssl-dev make -y
 
         PYTHON_BIN=/usr/bin/python
         install_pip
@@ -40,7 +40,7 @@ prepare_debian() {
 
         set +x
         echo
-        echo "   Debian Sytem ready for nextcloud."
+        echo "   Debian Sytem ready for next step."
         echo
         ansible --version
 }
@@ -48,7 +48,7 @@ prepare_debian() {
 usage() {
         echo
         echo "Linux distribution not detected."
-        echo "Use: ID=[ubuntu] prepare_system.sh"
+        echo "Use: ID=[ubuntu|debian] prepare_system.sh"
         echo "Other distributions not yet supported."
         echo
 }

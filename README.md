@@ -33,11 +33,13 @@ Code tools:
 curl -s https://raw.githubusercontent.com/bedlamss/Ansible-to-set-up-a-workstation/master/prepare_system.sh | /bin/bash
 ```
 
+clone this repo
 
+`git clone https://github.com/bedlamss/Ansible-to-set-up-a-workstation.git`
 
+cd to ansible directory
 
-
-
+`cd Ansible-to-set-up-a-workstation`
 
 
 

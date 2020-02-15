@@ -1,0 +1,17 @@
+#!/usr/bin/env ansible-playbook
+
+- name: "set up workstation"
+  hosts: workstation
+  become: true
+
+  roles:
+    - {
+        role: prepare_os,
+        when: ansible_os_family == "Debian" or ansible_os_family == "Ubuntu",
+      }
+
+  post_tasks:
+    - name: We are ready
+      debug:
+        msg:
+          - "Complete"
