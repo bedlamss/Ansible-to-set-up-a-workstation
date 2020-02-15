@@ -3,23 +3,11 @@
 # Prepare system 
 #
 
-install_pip () {
-        curl https://bootstrap.pypa.io/get-pip.py | $SUDO $PYTHON_BIN
-        $SUDO pip install setuptools -U
-        $SUDO pip install ansible -U
-        $SUDO pip install passlib -U
-        $SUDO pip install bcrypt -U
-}
-
 prepare_ubuntu() {
         $SUDO apt update -y
         $SUDO apt dist-upgrade -y
-        $SUDO apt install software-properties-common curl git mc facter python3 python3-apt aptitude -y
+        $SUDO apt install software-properties-common curl git mc facter python3 python3-apt aptitude ansible -y
         [ $(uname -m) == "aarch64" ] && $SUDO apt install gcc python3-dev libffi-dev libssl-dev make -y
-
-        PYTHON_BIN=/usr/bin/python3
-        install_pip
-        $SUDO pip install python3-apt -U
 
         set +x
         echo
