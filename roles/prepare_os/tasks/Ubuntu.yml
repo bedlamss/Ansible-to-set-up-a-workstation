@@ -21,7 +21,7 @@
       - language-pack-en-base
       - software-properties-common
       - facter
-      - node 
+      - nodejs 
     state: latest
 
 - name: Install software from snap (with full access file system)
