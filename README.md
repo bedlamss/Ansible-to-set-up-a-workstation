@@ -43,6 +43,6 @@ cd to ansible directory
 
 ```
 # run the playbook
-./workstation.yml
+sudo  ./workstation.yml
 ```
 

@@ -1,0 +1,5 @@
+---
+# tasks file for prepare_os
+
+- name: include os specific tasks
+  include_tasks: "{{ ansible_distribution }}.yml"
