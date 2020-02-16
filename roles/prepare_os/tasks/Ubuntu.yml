@@ -21,13 +21,19 @@
       - language-pack-en-base
       - software-properties-common
       - facter
+      - node 
     state: latest
 
-- name: Install software from snap (with full acces file system)
+- name: Install software from snap (with full access file system)
   snap:
     name:
       - atom
-      - pycharm-community
+      - gitkraken
       - code
       - chromium
+      - telegram-desktop
+      - sublime-text
+      - slack
+      - skype
+      - ruby
     classic: yes

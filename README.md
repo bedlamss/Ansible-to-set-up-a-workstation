@@ -9,7 +9,6 @@
 Programming tools:
 
 - Ruby
-- RVM
 - Node.js
 - NPM
 
@@ -57,7 +56,7 @@ clone this repo
 
 cd to the directory
 
-`cd Ansible-to-set-up-a-workstation`
+`cd playbook-web-development`
 
 ```
 # run the playbook
