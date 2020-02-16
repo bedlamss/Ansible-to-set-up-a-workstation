@@ -41,5 +41,8 @@ cd to ansible directory
 
 `cd Ansible-to-set-up-a-workstation`
 
-
+```
+# run the playbook
+./workstation.yml
+```
 

@@ -15,10 +15,19 @@
       - screen
       - curl
       - ffmpeg
-      - imagemagick 
+      - imagemagick
       - ghostscript
       - libfile-fcntllock-perl
       - language-pack-en-base
       - software-properties-common
       - facter
     state: latest
+
+- name: Install software from snap (with full acces file system)
+  snap:
+    name:
+      - atom
+      - pycharm-community
+      - code
+      - chromium
+    classic: yes
